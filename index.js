@@ -14,16 +14,14 @@ app.get('/scraper', (req, res) => {
 
     axios(URL)
         .then(response => {
-            // console.log(response.data);
             const html = response.data;
 
             const $ = cheerio.load(html);
-            // console.log($)
 
-            const noticias = []
-            $('.main-article-container  .row', html).each(function () {                // no puede ser arrow function
+            const computers = []
+            $('.main-article-container  .row', html).each(function () {                
                 const titulo = $(this).find('.title').text();
-                // console.log(titulo);
+               
                 const subtitulo = $(this).find('.supra-title').text();
 
                 const nombreAutor = $(this).find('.author-opinion-name a').text();
@@ -32,7 +30,7 @@ app.get('/scraper', (req, res) => {
 
                 const contenidoTexto = $(this).find('.paragraph').text();
 
-                noticias.push({
+                computers.push({
                     titulo,
                     subtitulo,
                     imagenAutor,
@@ -43,7 +41,7 @@ app.get('/scraper', (req, res) => {
 
             });
 
-            // console.log(noticias);
+            
             res.json(noticias)
         })
         .catch(err => console.log(err))
