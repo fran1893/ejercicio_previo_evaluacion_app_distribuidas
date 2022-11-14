@@ -1,6 +1,6 @@
 1- git init
 2- git add .
-3- git commit -m "Ejercicio previo evaluacion"
+3- git commit -m "Ejercicio previo a evaluacion"
 4- git remote add origin https://github.com/fran1893/ejercicio_previo_evaluacion_app_distribuidas.git
 5- git remote -v
 6- git push origin main
