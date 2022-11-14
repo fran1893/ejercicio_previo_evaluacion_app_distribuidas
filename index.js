@@ -45,5 +45,5 @@ app.get('/scraper', (req, res) => {
 
 
 app.listen(PORT, () => {
-    console.log(`Server Running`)
+    console.log(`Server Running...`)
 });
