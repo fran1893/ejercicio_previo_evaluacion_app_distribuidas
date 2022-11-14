@@ -1,2 +1,2 @@
 1- docker build -t
-2- docker run -it -p 4000:4000 ejercicio_previo_evaluacion
+2- docker run -it -p 4000:4000 ejercicio_previo_evaluacion  // El puerto tiene que ser 4000 ya que es el que se usa en app.js en la const URL
