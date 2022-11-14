@@ -1,0 +1,28 @@
+EJERCICIO PREVIO A LA EVALUACIÓN
+
+La prueba consta de tres partes
+
+1) SCRAPING
+Analiza la página:
+https://webscraper.io/test-sites/e-commerce/allinone/computers
+
+Hay que mostrar:
+Nombre del producto (como h2)
+Precio del producto (texto en color azul)
+Descripción (texto en color negro)
+Valoración máxima: 3 puntos
+
+2) GIT
+Sube el ejercicio anterior a GITHUB
+Guarda en un fichero llamado git.txt la instrucciones que has utilizado, línea a línea.
+Este fichero git.txt estará en la raíz del proyecto (a la altura de package.json)
+Si no has conseguido finalizar el ejercicio anterior sube lo que tengas
+Valoración máxima: 3 puntos
+
+3) DOCKER
+"Dockeriza" el proyecto, utilizando la imagen node:19-slim
+Si no has conseguido finalizar los ejercicios anteriores sube lo que tengas
+Valoración máxima: 3 puntos
+
+4) COMENTARIOS Y CLARIDAD DEL CÓDIGO
+Valoración máxima: 1 punto
