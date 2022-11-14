@@ -19,30 +19,24 @@ app.get('/scraper', (req, res) => {
             const $ = cheerio.load(html);
 
             const computers = []
-            $('.main-article-container  .row', html).each(function () {                
-                const titulo = $(this).find('.title').text();
+            $('.row', html).each(function () {                
+                const computerName = $(this).find('a').attr('title');
                
-                const subtitulo = $(this).find('.supra-title').text();
+                const price = $(this).find('.pull-right price').text();;
 
-                const nombreAutor = $(this).find('.author-opinion-name a').text();
-
-                const imagenAutor = URLimagenes + $(this).find('.img-opinion > img').attr('data-src');
-
-                const contenidoTexto = $(this).find('.paragraph').text();
+                const description = $(this).find('.description').text();
 
                 computers.push({
-                    titulo,
-                    subtitulo,
-                    imagenAutor,
-                    nombreAutor,
-                    contenidoTexto
+                    computerName,
+                    price,
+                    description,
                 });
 
 
             });
 
             
-            res.json(noticias)
+            res.json(computers)
         })
         .catch(err => console.log(err))
 });
