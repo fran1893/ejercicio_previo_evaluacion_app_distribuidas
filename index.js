@@ -19,10 +19,10 @@ app.get('/scraper', (req, res) => {
             const $ = cheerio.load(html);
 
             const computers = []
-            $('.row', html).each(function () {                
-                const computerName = $(this).find('a').attr('title');
+            $('.col-sm-4', html).each(function () {                
+                const computerName = $(this).find('h4 a').attr('title');
                
-                const price = $(this).find('.pull-right price').text();;
+                const price = $(this).find('.price').text();
 
                 const description = $(this).find('.description').text();
 
