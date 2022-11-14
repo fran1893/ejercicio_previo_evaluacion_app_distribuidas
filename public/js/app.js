@@ -9,7 +9,7 @@ fetch(URL)
     .then(data => {
         data.forEach(computer => {
             const names = '<h2>Nombre: ' + computer.computerName + '</h2>';
-            const prices = '<p>Precio: '+computer.price +'</p>'
+            const prices = '<p style="color:blue">Precio: '+computer.price +'</p>'
             const descriptions = '<p>Descripción: '+ computer.description +'</p>'
 
             divComputers.insertAdjacentHTML('beforeend', names);
